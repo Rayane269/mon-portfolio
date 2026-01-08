@@ -1,0 +1,51 @@
+{
+  "main": [
+    {
+      "name": "Accueil",
+      "url": "/"
+    },
+    {
+      "name": "Á propos de moi",
+      "url": "/about"
+    },
+    {
+      "name": "BTS SIO",
+      "url": "/bts"
+    },
+    {
+      "name": "Mes projets",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Categories",
+          "url": "/categories"
+        }
+      ]
+    },
+    
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+    
+  ],
+  "footer": [
+    {
+      "name": "Accueil",
+      "url": "/"
+    },
+    {
+      "name": "Á propos de moi",
+      "url": "/about"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "/elements"
+    }
+  ]
+}
