@@ -1,20 +1,18 @@
 ---
 
 title: "Me contacter "
-description: "meta description"
+description: "Si vous avez des questions ou des suggestions, n'hésitez pas à m'envoyer un message."
 phone: "+211234565523"
-mail: "info@email.com"
-location: "9567 Turner Trace Apt. BC C3G8A4"
-form_action: "#"
+mail: "soulaimanrayane2@gmail.com"
+location: "Strasbourg, France"
+form_action: "https://formspree.io/f/mojjadyo"
 layout: "contact"
 addresses:
   
   - icon: FaMapMarkerAlt
-    content: rayane.soulaiman@mediaschool.me
-    link: rayane.soulaiman@mediaschool.me
-  - icon: FaLocation
-    content: 68200 Mulhouse
+    content: soulaimanrayane2@gmail.com
+    link: soulaimanrayane2@gmail.com
+  
 
 draft: false
 ---
-Si vous avez des questions ou des suggestions, n'hésitez pas à m'envoyer un message.
