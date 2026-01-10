@@ -24,37 +24,22 @@ const Sidebar = ({ posts, categories, className }) => {
 
   return (
     <aside className={`${className} px-0 lg:px-6 lg:col-4`}>
-      {about.enable && (
-        <div className="relative rounded border border-border p-6 text-center dark:border-darkmode-border">
-          <ImageFallback
-            className="-z-[1]"
-            src="/images/map.svg"
-            fill={true}
-            alt="bg-map"
-          />
-          <Logo />
-          {markdownify(about.content, "p", "mt-8")}
-          <Social
-            className="socials sidebar-socials mt-6 justify-center"
-            source={social}
-          />
-        </div>
-      )}
+     
 
       {/* categories widget */}
-      {categories.enable && (
+      {/* {categories.enable && (
         <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
           <h4 className="section-title mb-12 text-center">
             {featured_posts.title}
           </h4>
           
         </div>
-      )}
+      )} */}
 
       {/* featured widget */}
       {featured_posts.enable && (
         <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
-          <h4 className="section-title mb-12 text-center">Featured</h4>
+          <h4 className="section-title mb-12 text-center">Autres projets</h4>
           <div className="mb-12 flex items-center justify-center">
             <button
               className={`btn px-5 py-2 ${
@@ -147,7 +132,7 @@ const Sidebar = ({ posts, categories, className }) => {
         </div>
       )}
 
-      {/* newsletter */}
+      {/* newsletter
       {newsletter.enable && (
         <div className="mt-6  rounded border border-border p-6 text-center dark:border-darkmode-border">
           <h4 className="section-title">{newsletter.title}</h4>
@@ -175,7 +160,7 @@ const Sidebar = ({ posts, categories, className }) => {
             </Link>
           </p>
         </div>
-      )}
+      )} */}
     </aside>
   );
 };
