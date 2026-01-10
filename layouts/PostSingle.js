@@ -24,12 +24,13 @@ const PostSingle = ({
   allCategories,
   relatedPosts,
 }) => {
-  let { description, title, date, image, categories } = frontmatter;
+  // AJOUT de 'pdf' ici pour l'extraire du fichier .md
+  let { description, title, date, image, categories, pdf } = frontmatter; 
   description = description ? description : content.slice(0, 120);
 
   const { theme } = useTheme();
   const author = frontmatter.author ? frontmatter.author : meta_author;
-  // Local copy so we don't modify global config.
+  
   let disqusConfig = config.disqus.settings;
   disqusConfig.identifier = frontmatter.disqusId
     ? frontmatter.disqusId
@@ -76,20 +77,44 @@ const PostSingle = ({
                       className="inline-flex items-center font-secondary text-xs leading-3"
                       href="/about"
                     >
-                      <FaUserAlt className="mr-1.5" />
-                      {author}
+                      <FaRegCalendar className="mr-1.5" />
+                      {dateFormat(date)}
                     </Link>
                   </li>
-                 
                 </ul>
+
                 <div className="content mb-16">
                   <MDXRemote {...mdxContent} components={shortcodes} />
                 </div>
+
+                {/* --- BLOC BOUTON DE TÉLÉCHARGEMENT PDF --- */}
+                {pdf && (
+                  <div className="mt-2 mb-16 border-t border-border pt-2 dark:border-darkmode-border">
+                    <h4 className="mb-6">Ressources du projet</h4>
+                    <a
+                      href={`/documents/${pdf}`}
+                      
+                      className="btn btn-primary flex items-center w-fit shadow-lg hover:shadow-xl transition-shadow"
+                    >
+                      <svg 
+                        className="mr-2 h-6 w-6" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                      Télécharger le compte-rendu technique (PDF)
+                    </a>
+                  </div>
+                )}
+                {/* --------------------------------------- */}
+                
                 {config.settings.InnerPaginationOptions.enableBottom && (
                   <InnerPagination posts={posts} date={date} />
                 )}
               </article>
-              
             </div>
             <Sidebar
               posts={posts.filter((post) => post.slug !== slug)}
@@ -97,8 +122,6 @@ const PostSingle = ({
             />
           </div>
         </div>
-
-        
       </section>
     </Base>
   );

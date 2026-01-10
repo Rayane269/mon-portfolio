@@ -14,7 +14,8 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 const { blog_folder } = config.settings;
 const { about, featured_posts, newsletter } = config.widgets;
 
-const Sidebar = ({ posts, categories, className }) => {
+const Sidebar = ({ posts, categories, className, data }) => {
+
   const sortPostByDate = sortByDate(posts);
   const featuredPosts = sortPostByDate.filter(
     (post) => post.frontmatter.featured
@@ -131,7 +132,7 @@ const Sidebar = ({ posts, categories, className }) => {
                 ))}
         </div>
       )}
-
+    
       {/* newsletter
       {newsletter.enable && (
         <div className="mt-6  rounded border border-border p-6 text-center dark:border-darkmode-border">
