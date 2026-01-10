@@ -48,7 +48,7 @@ const Sidebar = ({ posts, categories, className, data }) => {
               }`}
               onClick={() => setShowRecent(false)}
             >
-              Featured
+              En vedette
             </button>
             <button
               className={`btn ml-3  px-5 py-2 ${
@@ -56,7 +56,7 @@ const Sidebar = ({ posts, categories, className, data }) => {
               }`}
               onClick={() => setShowRecent(true)}
             >
-              Recent
+              Récent
             </button>
           </div>
           {showRecent

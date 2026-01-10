@@ -12,16 +12,9 @@
       "name": "BTS SIO",
       "url": "/bts"
     },
-    {
-      "name": "Mes projets",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Categories",
-          "url": "/categories"
-        }
-      ]
+     {
+      "name": "Mes Projets",
+      "url": "/posts"
     },
     
     {
@@ -44,8 +37,9 @@
       "url": "/contact"
     },
     {
-      "name": "Privacy Policy",
-      "url": "/elements"
+      "name": "Confidentialité",
+      "url": "/privacy"     
     }
+   
   ]
 }
