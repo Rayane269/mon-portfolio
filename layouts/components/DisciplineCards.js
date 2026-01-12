@@ -13,7 +13,7 @@ const cards = [
     title: "Tableau de synthèse E4",
     subtitle: "Lien missions – compétences",
     description: "Synthèse reliant mes missions E4 aux compétences du référentiel BTS SIO, illustrant les savoir-faire développés.",
-    image: "/images/numerique/virtual-product.png",
+    image: "/images/numerique/virtual-product.jpg",
   },
   {
     title: "Veille technologique",
@@ -34,7 +34,7 @@ const cards = [
     subtitle: "Dossier officiel Cyclades",
     description:
       "Documents officiels décrivant les missions E5 réalisées et les compétences mises en œuvre",
-    image: "/images/numerique/mission.png",
+    image: "/images/numerique/mission.jpg.webp",
   },
   {
     title: "Documentation des missions E5",
