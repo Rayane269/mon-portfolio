@@ -25,12 +25,12 @@ const PostSingle = ({
   relatedPosts,
 }) => {
   // AJOUT de 'pdf' ici pour l'extraire du fichier .md
-  let { description, title, date, image, categories, pdf } = frontmatter; 
+  let { description, title, date, image, categories, pdf } = frontmatter;
   description = description ? description : content.slice(0, 120);
 
   const { theme } = useTheme();
   const author = frontmatter.author ? frontmatter.author : meta_author;
-  
+
   let disqusConfig = config.disqus.settings;
   disqusConfig.identifier = frontmatter.disqusId
     ? frontmatter.disqusId
@@ -69,7 +69,7 @@ const PostSingle = ({
                     ))}
                   </ul>
                 </div>
-                
+
                 {markdownify(title, "h1", "lg:text-[42px] mt-4")}
                 <ul className="flex items-center space-x-4">
                   <li>
@@ -93,14 +93,14 @@ const PostSingle = ({
                     <h4 className="mb-6">Ressources du projet</h4>
                     <a
                       href={`/documents/${pdf}`}
-                      
+
                       className="btn btn-primary flex items-center w-fit shadow-lg hover:shadow-xl transition-shadow"
                     >
-                      <svg 
-                        className="mr-2 h-6 w-6" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        className="mr-2 h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -109,8 +109,23 @@ const PostSingle = ({
                     </a>
                   </div>
                 )}
+                {/* NOUVEAU : Bouton GitHub */}
+                {frontmatter.github_link && (
+                  <div className="mt-12 mb-16 border-t border-border pt-10 dark:border-darkmode-border">
+                    <h4 className="mb-6">Code Source du Projet</h4>
+                    <a
+                      href={frontmatter.github_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-primary flex items-center w-fit"
+                    >
+                      <FaUserAlt className="mr-2" /> {/* Ou une icône GitHub si tu l'importes */}
+                      Voir le projet sur GitHub
+                    </a>
+                  </div>
+                )}
                 {/* --------------------------------------- */}
-                
+
                 {config.settings.InnerPaginationOptions.enableBottom && (
                   <InnerPagination posts={posts} date={date} />
                 )}

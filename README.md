@@ -38,7 +38,7 @@ Si vous souhaitez explorer le code ou lancer le projet sur votre machine :
 
 1.  **Cloner le projet :**
     ```bash
-    git clone [https://github.com/Rayane269/mon-portfolio](https://github.com/Rayane269/mon-portfolio)
+    git clone https://github.com/Rayane269/mon-portfolio
     ```
 2.  **Installer les dépendances :**
     ```bash
