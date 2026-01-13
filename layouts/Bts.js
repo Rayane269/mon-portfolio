@@ -6,11 +6,12 @@ import { FaFileAlt, FaCertificate, FaSearch, FaBook } from "react-icons/fa";
 import Link from "next/link";
 
 // Configuration des ressources (Comptes-rendus, etc.)
+// Dans ton fichier Bts.js, modifie l'objet resources :
 const resources = [
-  { name: "comptes-rendus", label: "Mes Comptes-rendus", icon: <FaFileAlt className="mr-2" /> },
-  { name: "certifications", label: "Mes Certifications", icon: <FaCertificate className="mr-2" /> },
-  { name: "notes-de-synthese", label: "Mes Notes de synthèse", icon: <FaBook className="mr-2" /> },
-  { name: "veille-technologique", label: "Ma Veille technologique", icon: <FaSearch className="mr-2" /> },
+  { name: "posts", label: "Comptes-rendus", icon: <FaFileAlt className="mr-2" /> },
+  { name: "certifications", label: "Certifications", icon: <FaCertificate className="mr-2" /> },
+  { name: "veille", label: "Veille Techno", icon: <FaSearch className="mr-2" /> },
+ 
 ];
 
 const Bts = ({ data }) => {

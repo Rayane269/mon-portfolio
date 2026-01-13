@@ -29,4 +29,4 @@ Ce site est hébergé par **Vercel**. Pour la gestion des messages, j'utilise le
 Ce site est conçu pour être le plus respectueux possible de la vie privée. Il n'utilise pas de cookies publicitaires ou de traçage intrusif.
 
 ## 5. Vos droits
-Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande, vous pouvez me contacter directement via l'adresse email indiquée sur la page de contact.
+Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande, vous pouvez me contacter directement via la page de contact.

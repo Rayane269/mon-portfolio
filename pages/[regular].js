@@ -1,12 +1,12 @@
 import NotFound from "@layouts/404";
 import About from "@layouts/About";
 import Base from "@layouts/Baseof";
-import Bts from "@layouts/Bts"; // 1. AJOUTE CET IMPORT
+import Bts from "@layouts/Bts";
 import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
+import ResourceList from "@layouts/ResourceList"; // 1. Import du nouveau layout
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
-// for all regular pages
 const RegularPages = ({ data }) => {
   const { title, meta_title, description, image, noindex, canonical, layout } =
     data.frontmatter;
@@ -27,8 +27,10 @@ const RegularPages = ({ data }) => {
         <About data={data} />
       ) : layout === "contact" ? (
         <Contact data={data} />
-      ) : layout === "bts" ? ( // 2. AJOUTE CETTE CONDITION
+      ) : layout === "bts" ? (
         <Bts data={data} />
+      ) : layout === "ResourceList" ? ( // 2. Ajout de la condition pour la liste
+        <ResourceList data={data} />
       ) : (
         <Default data={data} />
       )}
@@ -37,29 +39,43 @@ const RegularPages = ({ data }) => {
 };
 export default RegularPages;
 
-// for regular page routes
 export const getStaticPaths = async () => {
-  const slugs = getSinglePage("content");
-  const paths = slugs.map((item) => ({
+  const allPages = getSinglePage("content");
+  // On récupère aussi les fichiers dans les sous-dossiers si nécessaire
+  const paths = allPages.map((item) => ({
     params: {
-      regular: item.slug,
+      regular: item.slug.replace("/", ""), // On nettoie le slug
     },
   }));
 
   return {
     paths,
-    fallback: false,
+    fallback: "blocking", // CHANGE 'false' par 'blocking'
   };
 };
 
-// for regular page data
 export const getStaticProps = async ({ params }) => {
   const { regular } = params;
   const allPages = await getRegularPage(regular);
+
+  let resources = [];
+  if (allPages.frontmatter.layout === "ResourceList") {
+    try {
+      // On ajoute un try/catch pour éviter que le site crash si le dossier manque
+      resources = getSinglePage(`content/${regular}`);
+    } catch (error) {
+      console.warn(`Le dossier content/${regular} est introuvable ou vide.`);
+      resources = []; 
+    }
+  }
+
   return {
     props: {
       slug: regular,
-      data: allPages,
+      data: {
+        ...allPages,
+        resources: resources,
+      },
     },
   };
 };

@@ -5,43 +5,44 @@ const cards = [
   {
     title: "Documentation des missions E4",
     subtitle: "Épreuve E4 – Dossier professionnel",
-    description:
-      "Rédaction des documentations liées à mes missions E4, mettant en valeur ma progression et les compétences acquises durant la formation.",
+    description: "Rédaction des documentations liées à mes missions E4, mettant en valeur ma progression.",
     image: "/images/numerique/dossier-e4.png.webp",
+    link: "/posts" // Ajout du lien vers tes comptes-rendus
   },
   {
     title: "Tableau de synthèse E4",
     subtitle: "Lien missions – compétences",
-    description: "Synthèse reliant mes missions E4 aux compétences du référentiel BTS SIO, illustrant les savoir-faire développés.",
+    description: "Synthèse reliant mes missions E4 aux compétences du référentiel BTS SIO.",
     image: "/images/numerique/virtual-product.jpg",
+    link: "/posts"
   },
   {
     title: "Veille technologique",
     subtitle: "Méthodologie et analyse",
-    description:
-      "Présentation de ma démarche de veille, des outils utilisés et du sujet étudié dans le domaine informatique",
+    description: "Présentation de ma démarche de veille, des outils utilisés et du sujet étudié.",
     image: "/images/numerique/veille.png",
+    link: "/veille" // Lien vers la page que nous venons de créer
   },
   {
     title: "Support de soutenance E4",
     subtitle: "Présentation orale",
-    description:
-      "Diaporama de soutenance présentant mes missions, mon parcours et les compétences professionnelles acquises.",
+    description: "Diaporama de soutenance présentant mes missions et mon parcours.",
     image: "/images/numerique/soutenance.png",
+    link: "/posts"
   },
   {
     title: "Fiches missions E5",
     subtitle: "Dossier officiel Cyclades",
-    description:
-      "Documents officiels décrivant les missions E5 réalisées et les compétences mises en œuvre",
+    description: "Documents officiels décrivant les missions E5 réalisées.",
     image: "/images/numerique/mission.jpg.webp",
+    link: "/posts"
   },
   {
     title: "Documentation des missions E5",
     subtitle: "Projets et procédures",
-    description:
-      "Documentations détaillées et procédures des projets présentés lors de l’épreuve E5.",
+    description: "Documentations détaillées et procédures des projets présentés lors de l’épreuve E5.",
     image: "/images/numerique/documentation.png",
+    link: "/posts"
   },
 ];
 
@@ -68,21 +69,25 @@ export default function DisciplineCards() {
             {/* Content */}
             <div className="relative z-10 h-full p-8 flex flex-col justify-between text-white">
               <div>
-                <p className="text-sm tracking-widest opacity-80">
+                <p className="text-sm tracking-widest opacity-80 uppercase">
                   {card.subtitle}
                 </p>
                 <h3 className="text-3xl font-bold mt-2 text-white">
                   {card.title}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed font-bold  opacity-90">
+                <p className="mt-4 text-sm leading-relaxed font-bold opacity-90">
                   {card.description}
                 </p>
               </div>
-               <button className="w-fit flex items-center gap-2 border border-white/80 rounded-full px-6 py-2 text-sm hover:bg-white hover:text-black transition">
+
+              {/* Utilisation de Link au lieu de button */}
+              <Link 
+                href={card.link} 
+                className="w-fit flex items-center gap-2 border border-white/80 rounded-full px-6 py-2 text-sm hover:bg-white hover:text-black transition no-underline text-white"
+              >
                 en savoir plus 
                 <span className="text-lg">→</span>
-              </button>
-             
+              </Link>
             </div>
           </div>
         ))}
