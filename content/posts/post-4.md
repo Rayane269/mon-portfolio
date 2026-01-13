@@ -3,7 +3,7 @@ title: "Mise en place d'une solution de gestion de parc et Helpdesk avec GLPI"
 date: 2025-12-18
 image: /images/post/glpi-management.png
 categories: ["Systèmes & Réseaux", "Gestion de Parc"]
-featured: true
+featured: false
 draft: false
 pdf: "glpi.pdf"
 ---
