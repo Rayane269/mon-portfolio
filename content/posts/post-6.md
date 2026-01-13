@@ -8,7 +8,7 @@ draft: false
 github_link: "https://github.com/Rayane269/nextcloud-auto-setup"
 ---
 
-### Présentation du projet
+
 Dans le cadre de ma formation **BTS SIO SISR**, j'ai réalisé un projet visant à automatiser l'installation et la configuration d'un serveur de stockage **Nextcloud**. L'objectif était de garantir un déploiement rapide, fiable et reproductible sur des machines virtuelles Debian.
 
 ### Architecture Technique
