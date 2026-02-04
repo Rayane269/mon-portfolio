@@ -23,17 +23,18 @@ experience:
   title: Expériences professionnelles
   list:
     - |
-      Stage – 5 semaines | Comores Cables – Comores (juil. – août 2025) 
+      Stage – 5 semaines | IDEA – Paris - France (juil. – août 2025) 
       • Participation à la maintenance du réseau et du parc informatique  
       • Assistance à l’administration des systèmes et équipements réseau  
       • Support technique aux utilisateurs et résolution d’incidents  
       • Sensibilisation aux bonnes pratiques de sécurité informatique  
 
     - |
-      Équipier polyvalent étudiant | Stellantis Mulhouse – France (sept. 2024 – aujourd’hui)  
-      • Travail en environnement industriel structuré et exigeant  
-      • Respect strict des procédures, délais et consignes de sécurité  
-      • Développement de la rigueur, de l’autonomie et de l’esprit d’équipe  
+   
+      Équipier polyvalent étudiant | Domino’s Pizza – Kingersheim – France (fev. 2025 – aujourd’hui)  
+      • Participation active à la préparation des commandes dans le respect des normes d’hygiène et de qualité.
+      • Accueil et service client au comptoir et par téléphone, encaissement, gestion des livraisons et entretien des espaces de travail.
+      • Travail en équipe dans un environnement dynamique nécessitant réactivité et polyvalence. 
 
     - |
       Assistant chef de projet digital / web & mobile | Tartib SAS – Moroni, Comores (déc. 2022 – juin 2024)  
