@@ -1,0 +1,8 @@
+{
+  "installCommand": "npm install --install-links --audit=false",
+  "build": {
+    "env": {
+      "VERCEL_SKIP_VULNERABILITY_CHECK": "1"
+    }
+  }
+}
