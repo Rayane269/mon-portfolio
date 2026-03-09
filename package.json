@@ -7,7 +7,7 @@
   "homepage": "https://themewagon.github.io/geeky-nextjs",
   "scripts": {
     "dev": "node lib/jsonGenerator.js && next dev",
-    "build": "npm_config_audit_level=high node lib/jsonGenerator.js && next build",
+    "build": "node lib/jsonGenerator.js && next build",
     "export": "npm run build && next export",
     "lint": "next lint",
     "start": "next start"
@@ -48,5 +48,8 @@
     "tailwind-bootstrap-grid": "^5.0.1",
     "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4"
+  },
+  "overrides": {
+    "next-mdx-remote": "6.0.0"
   }
 }
