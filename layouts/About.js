@@ -99,7 +99,7 @@ const About = ({ data }) => {
           <div className="mt-10 flex justify-center">
               <Link
                 className="btn btn-primary mt-6"
-                href="/cv/CV_MA_2025_Portfolio.pdf"
+                href="/cv/CV_MA_2026_Portfolio.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
