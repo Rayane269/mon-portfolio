@@ -23,7 +23,7 @@ experience:
   title: Expériences professionnelles
   list:
     - |
-      Stage – 5 semaines | IDEA – Paris - France (juil. – août 2025) 
+      Stage – 5 semaines |SCIENDI – ILLKIRCH-GRAFFENSTADEN- France (janv. – fev 2026) 
       • Participation à la maintenance du réseau et du parc informatique  
       • Assistance à l’administration des systèmes et équipements réseau  
       • Support technique aux utilisateurs et résolution d’incidents  
