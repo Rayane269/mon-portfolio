@@ -2,17 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const cards = [
+  
   {
-    title: "Documentation des missions E4",
-    subtitle: "Épreuve E4 – Dossier professionnel",
-    description: "Rédaction des documentations liées à mes missions E4, mettant en valeur ma progression.",
-    image: "/images/numerique/dossier-e4.png.webp",
-    link: "/posts" // Ajout du lien vers tes comptes-rendus
-  },
-  {
-    title: "Tableau de synthèse E4",
+    title: "Tableau de synthèse E5",
     subtitle: "Lien missions – compétences",
-    description: "Synthèse reliant mes missions E4 aux compétences du référentiel BTS SIO.",
+    description: "Synthèse reliant mes missions E5 aux compétences du référentiel BTS SIO.",
     image: "/images/numerique/virtual-product.jpg",
     link: "/posts"
   },
@@ -24,26 +18,13 @@ const cards = [
     link: "/veille" // Lien vers la page que nous venons de créer
   },
   {
-    title: "Support de soutenance E4",
+    title: "Support de soutenance E5",
     subtitle: "Présentation orale",
     description: "Diaporama de soutenance présentant mes missions et mon parcours.",
     image: "/images/numerique/soutenance.png",
     link: "/posts"
   },
-  {
-    title: "Fiches missions E5",
-    subtitle: "Dossier officiel Cyclades",
-    description: "Documents officiels décrivant les missions E5 réalisées.",
-    image: "/images/numerique/mission.jpg.webp",
-    link: "/posts"
-  },
-  {
-    title: "Documentation des missions E5",
-    subtitle: "Projets et procédures",
-    description: "Documentations détaillées et procédures des projets présentés lors de l’épreuve E5.",
-    image: "/images/numerique/documentation.png",
-    link: "/posts"
-  },
+    
 ];
 
 export default function DisciplineCards() {
