@@ -8,7 +8,7 @@ const cards = [
     subtitle: "Lien missions – compétences",
     description: "Synthèse reliant mes missions E5 aux compétences du référentiel BTS SIO.",
     image: "/images/numerique/virtual-product.jpg",
-    link: "/posts"
+    link: "/public/documents/Tableau_de_synthese_E5.pdf" // Lien vers le PDF
   },
   {
     title: "Veille technologique",
