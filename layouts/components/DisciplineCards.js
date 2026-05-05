@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const cards = [
-  
+
   {
     title: "Tableau de synthèse E5",
     subtitle: "Lien missions – compétences",
     description: "Synthèse reliant mes missions E5 aux compétences du référentiel BTS SIO.",
     image: "/images/numerique/virtual-product.jpg",
-    link: "/public/documents/Tableau_de_synthese_E5.pdf" // Lien vers le PDF
+    link: "/documents/Tableau_de_synthese_E5.pdf"
   },
   {
     title: "Veille technologique",
@@ -24,7 +24,7 @@ const cards = [
     image: "/images/numerique/soutenance.png",
     link: "/posts"
   },
-    
+
 ];
 
 export default function DisciplineCards() {
@@ -62,11 +62,13 @@ export default function DisciplineCards() {
               </div>
 
               {/* Utilisation de Link au lieu de button */}
-              <Link 
-                href={card.link} 
+              <Link
+                href={card.link}
+                target="_blank" // Ouvre dans un nouvel onglet
+                rel="noopener noreferrer" // Sécurité
                 className="w-fit flex items-center gap-2 border border-white/80 rounded-full px-6 py-2 text-sm hover:bg-white hover:text-black transition no-underline text-white"
               >
-                en savoir plus 
+                en savoir plus
                 <span className="text-lg">→</span>
               </Link>
             </div>
