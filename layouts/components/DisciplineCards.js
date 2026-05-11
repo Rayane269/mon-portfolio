@@ -22,7 +22,7 @@ const cards = [
     subtitle: "Présentation orale",
     description: "Diaporama de soutenance présentant mes missions et mon parcours.",
     image: "/images/numerique/soutenance.png",
-    link: "/posts"
+    link: "/documents/Support_de_soutenance_E5.pdf"
   },
 
 ];
