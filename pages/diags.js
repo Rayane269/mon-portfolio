@@ -108,7 +108,7 @@ export default function GanttProject() {
               className="relative w-full aspect-[16/9] rounded-xl overflow-hidden cursor-zoom-in border border-border shadow-md group"
             >
               <Image 
-                src="/images/post/Gantt.png" 
+                src="/images/diags/gantt.png" 
                 alt="Diagramme de Gantt complet Rayane Soulaiman"
                 fill
                 className="object-cover transition duration-500 group-hover:scale-[1.02]"
@@ -172,7 +172,7 @@ export default function GanttProject() {
               </button>
               <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
                 <img 
-                  src="/images/post/Gantt.png" 
+                  src="/images/diags/gantt.png" 
                   alt="Diagramme Gantt Grand Format" 
                   className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
                 />
