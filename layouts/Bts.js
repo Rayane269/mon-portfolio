@@ -8,7 +8,7 @@ import Link from "next/link";
 // Configuration des ressources (Comptes-rendus, etc.)
 // Dans ton fichier Bts.js, modifie l'objet resources :
 const resources = [
-  { name: "posts", label: "Comptes-rendus", icon: <FaFileAlt className="mr-2" /> },
+  { name: "diags", label: "Diagramme de Gantt", icon: <FaFileAlt className="mr-2" /> },
   { name: "certifications", label: "Certifications", icon: <FaCertificate className="mr-2" /> },
   { name: "veille", label: "Veille Techno", icon: <FaSearch className="mr-2" /> },
  
