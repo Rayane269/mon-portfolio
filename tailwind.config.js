@@ -52,6 +52,14 @@ module.exports = {
         light: theme.colors.default.text_color.light,
         "theme-light": theme.colors.default.theme_color.theme_light,
         "theme-dark": theme.colors.default.theme_color.theme_dark,
+        ink: "#141416",
+        cream: "#F4F1EB",
+        lilac: "#E3DDFF",
+        mint: "#CFEFDD",
+        peach: "#FFDCCB",
+        butter: "#FFEDA8",
+        sky: "#D4EAFF",
+        accent: "#F7B206",
         darkmode: {
           text: theme.colors.darkmode.text_color.default,
           light: theme.colors.darkmode.text_color.light,
@@ -79,6 +87,33 @@ module.exports = {
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
+      },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.75rem",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translate3d(0,0,0)" },
+          "100%": { transform: "translate3d(-50%,0,0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0) rotate(var(--r, 0deg))" },
+          "50%": { transform: "translateY(-10px) rotate(var(--r, 0deg))" },
+        },
+        "spin-slow": {
+          to: { transform: "rotate(360deg)" },
+        },
+        "word-in": {
+          "0%": { transform: "translateY(100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        marquee: "marquee 38s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        "spin-slow": "spin-slow 18s linear infinite",
+        "word-in": "word-in .6s cubic-bezier(.2,.8,.2,1) both",
       },
     },
   },

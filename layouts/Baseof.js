@@ -1,5 +1,7 @@
 import config from "@config/config.json";
 import { plainify } from "@lib/utils/textConverter";
+import Cursor from "@components/Cursor";
+import useReveal from "@hooks/useReveal";
 import Footer from "@partials/Footer";
 import Header from "@partials/Header";
 import Head from "next/head";
@@ -17,6 +19,7 @@ const Base = ({
   const { meta_image, meta_author, meta_description } = config.metadata;
   const { base_url } = config.site;
   const router = useRouter();
+  useReveal();
 
   return (
     <>
@@ -89,9 +92,10 @@ const Base = ({
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Cursor />
       <Header />
       {/* main site */}
-      <main>{children}</main>
+      <main id="main">{children}</main>
       <Footer />
     </>
   );

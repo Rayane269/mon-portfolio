@@ -1,31 +1,58 @@
 .btn {
-  @apply font-secondary inline-block border px-5 py-2.5 font-bold transition;
+  @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 font-secondary text-[15px] font-semibold leading-none transition-[color,background-color,transform,box-shadow] duration-300 ease-[cubic-bezier(.2,.8,.2,1)];
+
+  > * {
+    @apply relative z-[1];
+  }
+
+  &::before {
+    @apply absolute inset-0 z-0 translate-y-full rounded-full content-[''] transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)];
+  }
+
+  &:hover::before {
+    @apply translate-y-0;
+  }
+
+  &:active {
+    @apply scale-[.97];
+  }
 }
 
+// filled
 .btn-primary {
-  @apply bg-primary text-white rounded-[50px] px-8 py-2.5  relative border-0 overflow-hidden h-12;
+  @apply isolate bg-ink text-white dark:bg-darkmode-dark dark:text-ink;
 
   &::before {
-    @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px] ease-[cubic-bezier(.42,0,.58,1)];
+    @apply -z-[1] bg-primary;
   }
 
   &:hover {
-     &::before {
-      @apply w-full right-auto left-0;
-    }
+    @apply text-white;
   }
 }
 
+// outline
 .btn-outline-primary {
-  @apply border-primary bg-transparent hover:bg-primary hover:text-white  rounded-[50px] text-primary font-bold relative transition-all ease-[cubic-bezier(.42,0,.58,1)] duration-75 overflow-hidden h-12;
+  @apply isolate border border-ink/80 bg-transparent text-ink dark:border-darkmode-dark/70 dark:text-darkmode-dark;
 
   &::before {
-    @apply content-[''] absolute  h-full right-0  bg-black/5 w-0 top-0 transition-all duration-500 rounded-[50px];
+    @apply -z-[1] bg-ink dark:bg-darkmode-dark;
   }
 
   &:hover {
-     &::before {
-      @apply w-full right-auto left-0;
-    }
+    @apply text-white dark:text-ink;
   }
+}
+
+.btn-sm {
+  @apply px-5 py-2.5 text-sm;
+}
+
+// round arrow button
+.btn-circle {
+  @apply inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink text-white transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] dark:bg-darkmode-dark dark:text-ink;
+}
+
+.group:hover .btn-circle {
+  @apply -rotate-45 bg-primary text-white;
 }

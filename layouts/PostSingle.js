@@ -50,13 +50,13 @@ const PostSingle = ({
                       height="500"
                       width="1000"
                       alt={title}
-                      className="rounded-lg"
+                      className="w-full rounded-5xl"
                     />
                   )}
-                  <ul className="absolute top-3 left-2 flex flex-wrap items-center">
+                  <ul className="absolute top-5 left-4 flex flex-wrap items-center">
                     {categories.map((tag, index) => (
                       <li
-                        className="mx-2 inline-flex h-7 rounded-[35px] bg-primary px-3 text-white"
+                        className="mx-1 inline-flex rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink backdrop-blur"
                         key={"tag-" + index}
                       >
                         <Link
@@ -70,11 +70,11 @@ const PostSingle = ({
                   </ul>
                 </div>
 
-                {markdownify(title, "h1", "lg:text-[42px] mt-4")}
+                {markdownify(title, "h1", "display text-[2.4rem] md:text-[3.6rem] mt-10 mb-5")}
                 <ul className="flex items-center space-x-4">
                   <li>
                     <Link
-                      className="inline-flex items-center font-secondary text-xs leading-3"
+                      className="mb-8 inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] dark:border-darkmode-border"
                       href="/about"
                     >
                       <FaRegCalendar className="mr-1.5" />
