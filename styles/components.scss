@@ -1,6 +1,6 @@
 // section style
 .section {
-  @apply py-16;
+  @apply py-16 md:py-24;
 }
 
 // container
@@ -13,55 +13,39 @@
   @apply mb-5 leading-10;
 }
 
-// social icon style
-.social-icons {
-  @apply space-x-4;
-  li {
-    @apply inline-block;
-    a {
-      @apply block h-9 w-9 rounded-full border bg-primary text-center text-white;
-      svg {
-        @apply m-auto h-9;
-      }
-    }
-  }
-}
-
 // form style
 .form-input,
 .form-textarea {
-  @apply border-0 border-b border-border bg-transparent px-0 placeholder:text-xs placeholder:text-light  focus:border-primary focus:ring-transparent dark:border-darkmode-border dark:text-darkmode-light dark:placeholder:text-darkmode-light;
+  @apply rounded-2xl border border-border bg-white/60 px-5 py-3.5 text-dark placeholder:text-sm placeholder:text-light focus:border-primary focus:ring-4 focus:ring-primary/15 dark:border-darkmode-border dark:bg-white/5 dark:text-darkmode-dark dark:placeholder:text-darkmode-text;
 }
 
 // content style
 .content {
   @apply prose max-w-none;
-  @apply prose-headings:mt-[.5em] prose-headings:mb-[.9em] prose-headings:font-bold prose-headings:text-dark prose-headings:dark:text-white;
+  @apply prose-headings:mt-[.8em] prose-headings:mb-[.6em] prose-headings:font-secondary prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-dark prose-headings:dark:text-darkmode-dark;
   @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
   @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-hr:border-border prose-hr:dark:border-darkmode-border;
-  @apply prose-p:text-base prose-p:text-text prose-p:dark:text-darkmode-light;
-  @apply prose-blockquote:mb-12 prose-blockquote:rounded prose-blockquote:border-0 prose-blockquote:bg-theme-light prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:not-italic prose-blockquote:dark:bg-theme-dark prose-blockquote:lg:px-16;
-  @apply prose-code:px-1 prose-code:text-primary;
-  @apply prose-pre:rounded;
-  @apply prose-img:rounded;
-  @apply prose-table:rounded;
-  @apply prose-strong:text-dark prose-strong:dark:text-darkmode-light;
-  @apply prose-a:text-primary prose-a:no-underline hover:prose-a:underline;
-  @apply prose-li:text-text prose-li:dark:text-darkmode-light;
-  @apply prose-table:overflow-hidden prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
-  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-theme-dark prose-th:dark:text-darkmode-light;
+  @apply prose-p:text-[17px] prose-p:leading-[1.75] prose-p:text-text prose-p:dark:text-darkmode-text;
+  @apply prose-blockquote:mb-12 prose-blockquote:rounded-3xl prose-blockquote:border-0 prose-blockquote:bg-lilac prose-blockquote:py-1 prose-blockquote:px-12 prose-blockquote:not-italic prose-blockquote:dark:bg-darkmode-theme-dark prose-blockquote:lg:px-16;
+  @apply prose-code:rounded-md prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-medium prose-code:text-primary prose-code:before:content-none prose-code:after:content-none;
+  @apply prose-pre:rounded-2xl;
+  @apply prose-img:rounded-3xl;
+  @apply prose-strong:text-dark prose-strong:dark:text-darkmode-dark;
+  @apply prose-a:font-medium prose-a:text-primary prose-a:underline prose-a:decoration-primary/30 prose-a:underline-offset-4 hover:prose-a:decoration-primary;
+  @apply prose-li:text-text prose-li:dark:text-darkmode-text prose-li:marker:text-primary;
+  @apply prose-table:overflow-hidden prose-table:rounded-2xl prose-table:border prose-table:border-border prose-table:dark:border-darkmode-border;
+  @apply prose-thead:border-border prose-thead:bg-theme-light prose-th:py-4 prose-th:px-4 prose-th:text-dark prose-thead:dark:border-darkmode-border prose-thead:dark:bg-darkmode-theme-dark prose-th:dark:text-darkmode-dark;
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
-  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-light;
-  @apply prose-li:marker:dark:text-darkmode-light;
+  @apply prose-td:px-3 prose-td:py-4 prose-td:dark:text-darkmode-text;
 
   img + em {
     @apply -mt-4 block text-center text-gray-500;
   }
   blockquote {
     & > p {
-      @apply relative text-2xl text-black;
+      @apply relative font-secondary text-2xl text-dark dark:text-darkmode-dark;
       &::after,
       &::before {
         @apply absolute inline-block h-5 w-5 bg-[url('/images/quote.svg')] bg-[length:20px_20px] bg-no-repeat content-[''] lg:h-8 lg:w-8 lg:bg-[length:32px_32px];
@@ -78,46 +62,48 @@
   }
 }
 
-//banner
-.banner {
-  &-title {
-    h1 {
-      @apply font-bold leading-[1] lg:text-[72px];
-    }
+// eyebrow label (small pill above titles)
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full border border-dark/15 px-4 py-1.5 font-secondary text-xs font-semibold uppercase tracking-[0.14em] text-dark dark:border-white/15 dark:text-darkmode-dark;
 
-    strong {
-      @apply text-primary;
-    }
-
-    span {
-      @apply font-normal font-bold text-dark dark:text-darkmode-light lg:text-[55px];
-    }
+  &::before {
+    @apply h-1.5 w-1.5 rounded-full bg-primary content-[''];
   }
+}
+
+// display titles
+.display {
+  @apply font-secondary font-extrabold leading-[0.92] tracking-[-0.045em] text-dark dark:text-darkmode-dark;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px currentColor;
+  color: transparent;
 }
 
 //section-title
 .section-title {
-  @apply mb-12 underline decoration-primary decoration-wavy decoration-2 underline-offset-[.5em];
+  @apply mb-12 font-secondary text-[2.4rem] font-extrabold leading-[1] tracking-[-0.035em] md:text-[3.4rem];
+}
+
+// soft surface card used across pages
+.surface {
+  @apply rounded-4xl border border-border/80 bg-white/55 p-6 md:p-10 dark:border-darkmode-border dark:bg-white/[.03];
 }
 
 //socials
 .socials {
-  @apply mx-3 flex items-center justify-center  space-x-3 px-4 lg:justify-start lg:border-x 2xl:space-x-4;
+  @apply flex items-center gap-1;
   li {
     @apply inline-flex;
   }
   a {
-    @apply inline-block px-2 py-1 text-lg text-dark  hover:text-primary dark:text-darkmode-light dark:hover:text-primary;
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full text-lg text-dark transition hover:bg-ink hover:text-white dark:text-darkmode-dark dark:hover:bg-white dark:hover:text-ink;
   }
 }
 
 .newsletter-input:focus + svg {
   opacity: 0;
-}
-
-.sidebar-socials,
-footer .socials {
-  @apply border-primary;
 }
 
 //experience
@@ -128,6 +114,71 @@ footer .socials {
     &::before {
       @apply absolute left-1 top-2.5 h-[9px] w-[9px] rounded-full border-2 border-body bg-primary shadow-[0px_0px_0px_2px] shadow-primary content-[''] dark:border-darkmode-body;
     }
+  }
+}
+
+// marquee
+.marquee {
+  @apply flex w-max animate-marquee;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+// noise-free glow blobs
+.blob {
+  @apply pointer-events-none absolute rounded-full opacity-70 blur-3xl;
+}
+
+// scroll reveal (only hidden when JS is ready, content stays visible without JS)
+.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: var(--d, 0ms);
+}
+
+.js-reveal [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+// custom cursor
+.cursor {
+  @apply pointer-events-none fixed left-0 top-0 z-[100] hidden h-9 w-9 items-center justify-center rounded-full border border-ink/60 text-[10px] font-semibold uppercase tracking-wider text-white transition-[width,height,background-color,border-color,opacity] duration-300 dark:border-white/60;
+  margin: -18px 0 0 -18px;
+
+  &.is-hover {
+    @apply h-16 w-16 border-transparent bg-primary/90;
+    margin: -32px 0 0 -32px;
+  }
+
+  &.is-hidden {
+    @apply opacity-0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor {
+    @apply flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee,
+  .animate-float,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+  .js-reveal [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .cursor {
+    display: none !important;
   }
 }
 
@@ -185,7 +236,7 @@ footer .socials {
 .post {
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -195,7 +246,7 @@ footer .socials {
 
     & > p {
       @apply lg:text-[24px];
-      @apply relative text-2xl text-black;
+      @apply relative text-2xl text-dark dark:text-darkmode-dark;
       &::after,
       &::before {
         @apply absolute inline-block h-8 w-8 bg-[url('/images/quote.svg')] bg-[length:32px_32px] bg-no-repeat content-[''];

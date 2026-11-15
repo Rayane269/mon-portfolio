@@ -29,8 +29,8 @@ const Sidebar = ({ posts, categories, className, data }) => {
 
       {/* categories widget */}
       {/* {categories.enable && (
-        <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
-          <h4 className="section-title mb-12 text-center">
+        <div className="mt-6 surface !p-6">
+          <h4 className="mb-8 text-center font-secondary text-2xl font-extrabold tracking-tight">
             {featured_posts.title}
           </h4>
           
@@ -39,8 +39,8 @@ const Sidebar = ({ posts, categories, className, data }) => {
 
       {/* featured widget */}
       {featured_posts.enable && (
-        <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
-          <h4 className="section-title mb-12 text-center">Autres projets</h4>
+        <div className="mt-6 surface !p-6">
+          <h4 className="mb-8 text-center font-secondary text-2xl font-extrabold tracking-tight">Autres projets</h4>
           <div className="mb-12 flex items-center justify-center">
             <button
               className={`btn px-5 py-2 ${
@@ -72,7 +72,7 @@ const Sidebar = ({ posts, categories, className, data }) => {
                   >
                     {post.frontmatter.image && (
                       <ImageFallback
-                        className="mr-3 h-[85px] w-[85px] rounded-full object-cover"
+                        className="mr-3 h-[85px] w-[85px] rounded-2xl object-cover"
                         src={post.frontmatter.image}
                         alt={post.frontmatter.title}
                         width={105}
@@ -107,7 +107,7 @@ const Sidebar = ({ posts, categories, className, data }) => {
                   >
                     {post.frontmatter.image && (
                       <ImageFallback
-                        className="mr-3 h-[85px] w-[85px] rounded-full object-cover"
+                        className="mr-3 h-[85px] w-[85px] rounded-2xl object-cover"
                         src={post.frontmatter.image}
                         alt={post.frontmatter.title}
                         width={105}
@@ -135,7 +135,7 @@ const Sidebar = ({ posts, categories, className, data }) => {
     
       {/* newsletter
       {newsletter.enable && (
-        <div className="mt-6  rounded border border-border p-6 text-center dark:border-darkmode-border">
+        <div className="mt-6  surface !p-6 text-center">
           <h4 className="section-title">{newsletter.title}</h4>
           <p className="mt-10 text-xs">{newsletter.content}</p>
           <MailchimpSubscribe

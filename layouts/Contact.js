@@ -29,15 +29,15 @@ const Contact = ({ data }) => {
   return (
     <section className="section">
       <div className="container">
-        <div className="row relative pb-16">
-          <div className="lg:col-6">
-            {markdownify(title, "h1", "h1 text-left lg:text-[55px] mt-12")}
+        <div className="relative grid gap-10 pb-16 lg:grid-cols-2 lg:gap-16">
+          <div>
+            {markdownify(title, "h1", "display text-left text-[3rem] md:text-[5rem] mt-6 mb-10")}
             <div className="content text-left mt-4">
               {markdownify(description, "p")}
             </div>
           </div>
 
-          <div className="contact-form-wrapper rounded border border-border p-6 dark:border-darkmode-border lg:col-6 mt-12 lg:mt-0">
+          <div className="contact-form-wrapper surface">
             {status === "SUCCESS" ? (
               <div className="bg-theme-light dark:bg-darkmode-theme-dark p-8 rounded text-center">
                 <h3 className="text-primary h3 mb-4">Message envoyé !</h3>

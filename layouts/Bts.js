@@ -26,10 +26,10 @@ const Bts = ({ data }) => {
         <div className="text-center">
           {image && (
             <div className="mb-8">
-              <ImageFallback src={image} width={1298} height={616} alt={title} className="rounded-lg shadow" />
+              <ImageFallback src={image} width={1298} height={616} alt={title} className="rounded-5xl" />
             </div>
           )}
-          {markdownify(title, "h1", "h1 text-left lg:text-[55px] mt-12")}
+          {markdownify(title, "h1", "display text-left text-[3rem] md:text-[5rem] mt-6 mb-10")}
         </div>
 
         {/* --- CONTENU MDX --- */}
@@ -39,7 +39,7 @@ const Bts = ({ data }) => {
 
         {/* --- SECTION EDUCATION --- */}
         <section className="mt-12 text-left">
-          <div className="rounded border border-border p-6 dark:border-darkmode-border">
+          <div className="surface">
             {education?.title && markdownify(education.title, "h2", "section-title mb-10")}
             <div className="row">
               {education?.degrees?.map((degree, index) => (
@@ -56,24 +56,24 @@ const Bts = ({ data }) => {
 
         {/* --- SECTION EXAMENS --- */}
         <section className="mt-16">
-          <div className="rounded-lg shadow-lg p-8 md:p-12 border border-border dark:border-darkmode-border">
-            <h2 className="text-4xl section-title mb-10">Les examens</h2>
+          <div className="surface">
+            <h2 className="section-title mb-10">Les examens</h2>
             <p className="mb-8 text-lg text-left">
               Le BTS SIO est constitué de 7 épreuves <span className="italic font-semibold">(E1 à E7)</span> évaluant vos compétences.
             </p>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-primary">
+            <div className="overflow-x-auto rounded-3xl border border-border dark:border-darkmode-border">
+              <table className="w-full border-collapse border-hidden border border-border dark:border-darkmode-border">
                 <thead>
-                  <tr className="bg-amber-50 dark:bg-teal-900/20">
-                    <th className="border border-primary px-4 py-4 text-left font-bold dark:text-amber-300">Numéro</th>
-                    <th className="border border-primary px-4 py-4 text-left font-bold dark:text-amber-300">Nom de l'épreuve</th>
+                  <tr className="bg-theme-light dark:bg-darkmode-theme-dark">
+                    <th className="border border-border dark:border-darkmode-border px-4 py-4 text-left font-bold text-dark dark:text-darkmode-dark">Numéro</th>
+                    <th className="border border-border dark:border-darkmode-border px-4 py-4 text-left font-bold text-dark dark:text-darkmode-dark">Nom de l'épreuve</th>
                   </tr>
                 </thead>
                 <tbody>
                   {examens?.map((ex, i) => (
-                    <tr key={i} className="hover:bg-amber-50/50 dark:hover:bg-amber-900/10 transition-colors">
-                      <td className="border border-primary px-4 py-3 font-bold text-teal-700 dark:text-white">{ex.numero}</td>
-                      <td className="border border-primary px-4 py-3 text-left">
+                    <tr key={i} className="hover:bg-lilac/50 dark:hover:bg-white/5 transition-colors">
+                      <td className="border border-border dark:border-darkmode-border px-4 py-3 font-bold text-primary dark:text-darkmode-primary">{ex.numero}</td>
+                      <td className="border border-border dark:border-darkmode-border px-4 py-3 text-left">
                         {ex.nom} {ex.italic && <span className="italic text-gray-500 text-sm">(Spécifique à l'option)</span>}
                       </td>
                     </tr>
@@ -89,7 +89,7 @@ const Bts = ({ data }) => {
           <ul className="row justify-center">
             {resources.map((item, i) => (
               <li key={i} className="mt-4 block lg:col-4 xl:col-3">
-                <Link href={`/${item.name}`} className="flex w-full items-center justify-center rounded-lg bg-theme-light px-4 py-8 font-bold text-dark transition hover:bg-primary hover:text-white dark:bg-darkmode-theme-dark dark:text-darkmode-light dark:hover:bg-primary dark:hover:text-white shadow-sm">
+                <Link href={`/${item.name}`} className="flex w-full items-center justify-center rounded-4xl bg-lilac px-4 py-10 font-secondary text-lg font-bold text-ink transition duration-500 hover:-translate-y-1.5 hover:bg-ink hover:text-white">
                   {item.icon} {item.label}
                 </Link>
               </li>

@@ -19,7 +19,7 @@ const ResourceList = ({ data }) => {
         <div className="row">
           {resources.map((resource, i) => (
             <div key={i} className="mb-8 col-12 md:col-6 lg:col-4">
-              <div className="card rounded-lg border border-border p-4 shadow-sm hover:shadow-md transition dark:border-darkmode-border dark:bg-darkmode-theme-dark">
+              <div className="card surface !p-4 transition duration-500 hover:-translate-y-1.5">
                 {/* Image du projet */}
                 <Link href={`/${resource.slug}`}>
                   <ImageFallback
@@ -27,7 +27,7 @@ const ResourceList = ({ data }) => {
                     width={445}
                     height={230}
                     alt={resource.frontmatter.title}
-                    className="rounded-lg mb-4"
+                    className="rounded-3xl mb-4"
                   />
                 </Link>
 

@@ -19,11 +19,11 @@ const About = ({ data }) => {
               width={1298}
               height={616}
               alt={title}
-              className="rounded-lg"
+              className="rounded-5xl"
             />
           </div>
         )}
-        {markdownify(title, "h1", "h1 text-left lg:text-[55px] mt-12")}
+        {markdownify(title, "h1", "display text-left text-[3rem] md:text-[5rem] mt-6 mb-10")}
 
         <div className="content text-left justify-normal">
           <MDXRemote {...mdxContent} components={shortcodes} />
@@ -31,7 +31,7 @@ const About = ({ data }) => {
 
         <div className=" text-left ">
           <div className=" ">
-            <div className="rounded border border-border p-6 dark:border-darkmode-border ">
+            <div className="surface">
               {markdownify(education.title, "h2", "section-title mb-12")}
               <div className="row">
                 {education.degrees.map((degree, index) => (
@@ -51,7 +51,7 @@ const About = ({ data }) => {
             {/* Experience 1 */}
             {experience && (
               <div className="experience">
-              <div className="rounded border border-border p-6 dark:border-darkmode-border h-full">
+              <div className="surface h-full">
                 {markdownify(experience.title, "h2", "section-title mb-12")}
                 <ul className="row">
                   {experience?.list?.map((item, index) => (
@@ -70,7 +70,7 @@ const About = ({ data }) => {
 
             {skills && (
               <div className="skills">
-                <div className="rounded border border-border p-6 dark:border-darkmode-border h-full bg-muted/40">
+                <div className="surface h-full">
                   <h2 className="section-title mb-8">{skills.title}</h2>
                   <div className="space-y-6">
                     {skills.categories.map((category, index) => (
@@ -83,7 +83,7 @@ const About = ({ data }) => {
                           {category.items.map((skill, i) => (
                             <span
                               key={"skill-" + i}
-                              className="rounded-full border border-primary/40 px-4 py-2 text-sm font-semibold  bg-primary text-white transition"
+                              className="rounded-full border border-dark/15 bg-white/70 px-4 py-2 text-sm font-semibold text-dark transition hover:-translate-y-0.5 hover:bg-ink hover:text-white dark:border-white/15 dark:bg-white/5 dark:text-darkmode-dark"
                             >
                               {skill}
                             </span>
