@@ -1,81 +1,110 @@
 ---
 title: À propos de moi
 image: /images/author.png
-description: "meta description"
+description: "Rayane Soulaiman, diplômé d'un BTS SIO option SISR, en Bachelor Administrateur d'Infrastructures Sécurisées (AIS) à IRIS Strasbourg. Systèmes, réseaux et sécurité."
 layout: about
 
+status: "Bac+3 AIS · Titre RNCP niveau 6 · Disponible pour une alternance"
+cv: /cv/CV-Rayane-Soulaiman-Alternance-AIS.pdf
+
 education:
-  title: Mon Parcours Scolaire
+  title: Mon parcours
   degrees:
-    - university: "Brevet des collèges"
-      content: "2016 – 2017 • Groupe scolaire La Fraternité (M'dé Bamabo, Comores) – Mention Très Bien"
+    - title: "Bachelor Administrateur d'Infrastructures Sécurisées (AIS)"
+      school: "IRIS Strasbourg"
+      date: "2026 – 2027"
+      current: true
+      content: "Bac+3 · Titre RNCP niveau 6 · en alternance. Administration et sécurisation des systèmes et réseaux, virtualisation, supervision, cybersécurité."
 
-    - university: "Baccalauréat"
-      content: "2019 – 2020 • Groupe scolaire La Fraternité (M'dé Bamabo, Comores) – Options mathématiques, numérique et sciences informatiques – Mention Bien"
+    - title: "BTS SIO – option SISR"
+      school: "IRIS Strasbourg"
+      date: "2024 – 2026"
+      content: "Diplômé. Conception, déploiement et sécurisation d'infrastructures, support technique aux utilisateurs."
 
-    - university: "DUT Génie Informatique"
-      content: "2020 – 2022 • IUT Comores – Diplôme Universitaire de Technologie en informatique – Mention Assez Bien"
+    - title: "DUT Génie Informatique"
+      school: "IUT des Comores"
+      date: "2020 – 2022"
+      content: "Mention Assez Bien. Algorithmique, développement logiciel et web, bases de données."
 
-    - university: "BTS SIO – Option SISR"
-      content: "2024 – 2026 • IRIS Strasbourg – Solutions d’Infrastructure, Systèmes et Réseaux"
+    - title: "Baccalauréat"
+      school: "Groupe scolaire La Fraternité (M'dé Bamabo, Comores)"
+      date: "2019 – 2020"
+      content: "Options mathématiques, numérique et sciences informatiques – Mention Bien."
+
+    - title: "Brevet des collèges"
+      school: "Groupe scolaire La Fraternité (M'dé Bamabo, Comores)"
+      date: "2016 – 2017"
+      content: "Mention Très Bien."
 
 experience:
   title: Expériences professionnelles
   list:
-    - |
-      Stage – 5 semaines |SCIENDI – ILLKIRCH-GRAFFENSTADEN- France (janv. – fev 2026) 
-      • Participation à la maintenance du réseau et du parc informatique  
-      • Assistance à l’administration des systèmes et équipements réseau  
-      • Support technique aux utilisateurs et résolution d’incidents  
-      • Sensibilisation aux bonnes pratiques de sécurité informatique  
+    - role: "Stagiaire Technicien Systèmes & Réseaux"
+      company: "SCIENDI"
+      place: "Illkirch-Graffenstaden (67)"
+      date: "Janv. 2026 – Févr. 2026"
+      missions:
+        - "Participation au déploiement de nouvelles architectures réseau au sein du data center."
+        - "Diagnostic et résolution d'incidents : connectivité, routage, accès distant, performance."
+        - "Reconditionnement et remise en service d'un parc d'ordinateurs portables."
 
-    - |
-   
-      Équipier polyvalent étudiant | Domino’s Pizza – Kingersheim – France (fev. 2025 – aujourd’hui)  
-      • Participation active à la préparation des commandes dans le respect des normes d’hygiène et de qualité.
-      • Accueil et service client au comptoir et par téléphone, encaissement, gestion des livraisons et entretien des espaces de travail.
-      • Travail en équipe dans un environnement dynamique nécessitant réactivité et polyvalence. 
+    - role: "Technicien Support & Maintenance Réseau"
+      company: "Tartib SAS"
+      place: "Moroni, Comores"
+      date: "2020 – 2022"
+      missions:
+        - "Configuration de switchs et segmentation en VLAN ; sécurisation des flux inter-serveurs."
+        - "Déploiement et maintenance d'applications sur serveurs Linux (Apache / Nginx) conteneurisées avec Docker."
+        - "Câblage réseau LAN (prises RJ45) et installation de caméras de vidéosurveillance."
 
-    - |
-      Assistant chef de projet digital / web & mobile | Tartib SAS – Moroni, Comores (déc. 2022 – juin 2024)  
-      • Suivi et coordination de projets web et mobiles  
-      • Participation à la conception fonctionnelle et technique  
-      • Tests, validation des fonctionnalités et gestion des anomalies  
-      • Contribution au développement et à la maintenance applicative  
+    - role: "Stagiaire Développeur Web"
+      company: "COMOR'LAB"
+      place: "Moroni, Comores"
+      date: "Juil. 2020 – Août 2021"
+      missions:
+        - "Développement et maintenance du back-end Laravel (architecture MVC, services, repositories)."
+        - "Intégration d'API externes (OpenWeatherMap) pour l'affichage de données en temps réel."
 
+    - role: "Équipier polyvalent (emploi étudiant)"
+      company: "Domino's Pizza"
+      place: "Kingersheim (68)"
+      date: "Depuis 2025"
+      missions:
+        - "Accueil et service client au comptoir et par téléphone, encaissement, livraisons : gestion du rush et de la pression."
 
 skills:
   title: Compétences
   categories:
-    - name: Réseaux & Systèmes
-      items:
-        - Administration Linux
-        - Windows Server
-        - Réseaux TCP/IP
-        - Sécurité réseau
-        - Virtualisation
-        - Scripting Bash
-        - Scripting PowerShell
+    - name: Systèmes
+      items: ["Windows", "Linux (GNU)", "Apache", "Nginx"]
+    - name: Virtualisation & conteneurs
+      items: ["VMware", "Proxmox", "Docker"]
+    - name: Réseaux
+      items: ["TCP/IP", "UDP", "VLAN", "Switching", "Routage", "DNS", "SMTP", "LAN / RJ45", "GNS3"]
+    - name: Automatisation & DevOps
+      items: ["PowerShell", "GitLab", "Node.js"]
+    - name: Support & ITSM
+      items: ["GLPI", "Diagnostic d'incidents", "Accès distant"]
+    - name: Web & bases de données
+      items: ["MySQL", "PHP / Laravel", "HTML5 / CSS3", "JavaScript", "API REST"]
 
-    - name: Développement
-      items:
-        - HTML / CSS
-        - JavaScript
-        - React / Next.js
-        - Laravel
-        - Tailwind CSS
-        - Django
+languages:
+  - name: Français
+    level: Courant
+  - name: Anglais
+    level: Intermédiaire (technique)
+  - name: Arabe
+    level: Notions
 
-    - name: Outils & Méthodes
-      items:
-        - Git / GitHub
-        - Support & maintenance informatique
-        - Gestion de projet (bases)
-        - Documentation technique
-        - GNS3
-        - Doker
+soft_skills:
+  - Rigueur et méthode
+  - Réactivité face aux incidents
+  - Sens du service utilisateur
+  - Polyvalence et autonomie
 ---
 
-Passionné par l’informatique et particulièrement attiré par les réseaux, j’ai débuté mon parcours par un DUT en Génie Informatique à l’Institut Universitaire de Technologie des Comores. Cette formation m’a permis d’acquérir des bases solides en informatique, notamment en architecture des ordinateurs, algorithmique et programmation, développement web et orienté objet, ainsi qu’en systèmes de gestion de bases de données relationnelles.
+Passionné par l'informatique et particulièrement attiré par les réseaux, j'ai débuté mon parcours par un DUT Génie Informatique à l'IUT des Comores. Cette formation m'a donné des bases solides en architecture des ordinateurs, algorithmique, programmation, développement web et bases de données relationnelles.
 
-À l’issue de ce DUT, j’ai poursuivi mes études en BTS SIO (Services Informatiques aux Organisations)  à IRIS Strasbourg. Cette formation m’a permis de structurer davantage mes apprentissages et de renforcer ma rigueur, mon organisation et mes compétences techniques. Je me spécialise aujourd’hui en Réseaux et Sécurité, avec l’objectif de concevoir, administrer et sécuriser des infrastructures informatiques fiables et performantes.
+J'ai ensuite obtenu mon **BTS SIO option SISR** à IRIS Strasbourg, où j'ai appris à concevoir, déployer et sécuriser des infrastructures, tout en assurant le support aux utilisateurs.
+
+Aujourd'hui, je poursuis en **Bachelor Administrateur d'Infrastructures Sécurisées (AIS)**, un Bac+3 (titre RNCP niveau 6) préparé à IRIS Strasbourg en alternance. Je recherche une alternance en systèmes et réseaux pour contribuer à l'exploitation, à la sécurisation et à l'évolution d'une infrastructure, au plus près des utilisateurs.

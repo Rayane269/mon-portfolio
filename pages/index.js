@@ -83,7 +83,7 @@ const Home = ({ banner, posts, featured_posts, recent_posts, categories }) => {
                 className="eyebrow mb-8 animate-word-in"
                 style={{ animationDelay: "100ms" }}
               >
-                BTS SIO · option SISR
+                Bachelor AIS · Disponible pour une alternance
               </p>
 
               {markdownify(

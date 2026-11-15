@@ -2,7 +2,7 @@
 banner:
   title:  Bonjour 👋, je suis 
   title_small: "Rayane SOULAIMAN"
-  content:  et je suis apprenti Administrateur systèmes & réseaux à l'école IRIS Strasbourg
+  content: "Diplômé d'un BTS SIO option SISR, je prépare le Bachelor Administrateur d'Infrastructures Sécurisées (Bac+3) à IRIS Strasbourg et je recherche une alternance en systèmes et réseaux."
   image_enable: true
   image: /images/banner-author.png
   button:
