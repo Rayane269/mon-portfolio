@@ -114,12 +114,12 @@ const Header = () => {
               <Link
                 href={item.url}
                 tabIndex={showMenu ? 0 : -1}
-                className={`nav-link transition-transform duration-700 ${
+                className={`nav-link !flex items-baseline transition-transform duration-700 ${
                   showMenu ? "translate-y-0" : "translate-y-full"
                 } ${isActive(router, item.url) ? "active" : ""}`}
                 style={{ transitionDelay: `${150 + i * 60}ms` }}
               >
-                <span className="mr-3 align-top font-primary text-xs font-medium text-white/40">
+                <span className="mr-3 shrink-0 font-primary text-xs font-medium text-white/40">
                   0{i + 1}
                 </span>
                 {item.name}

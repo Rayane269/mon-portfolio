@@ -9,19 +9,17 @@
       "url": "/about"
     },
     {
-      "name": "BTS SIO",
-      "url": "/bts"
-    },
-     {
       "name": "Mes Projets",
       "url": "/posts"
     },
-    
+    {
+      "name": "Veille technologique",
+      "url": "/veille"
+    },
     {
       "name": "Contact",
       "url": "/contact"
     }
-    
   ],
   "footer": [
     {
@@ -38,8 +36,7 @@
     },
     {
       "name": "Confidentialité",
-      "url": "/privacy"     
+      "url": "/privacy"
     }
-   
   ]
 }
